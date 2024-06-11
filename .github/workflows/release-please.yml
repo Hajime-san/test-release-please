@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
           token: ${{ steps.app-token.outputs.token }}
 
-      - uses: googleapis/release-please-action@f3969c04a4ec81d7a9aa4010d84ae6a7602f86a7 # v4
+      - uses: Hajime-san/release-please-action@538e32e0f959c3f9e6f3adfca8127ff0b8c2f4e5 # v4
         with:
           manifest-file: .release-please-manifest.json
           config-file: release-please-config.json
