@@ -1,6 +1,6 @@
 {
   "packages/app-a": "1.0.0",
   "packages/app-a+FILLER": "0.0.0",
-  "packages/app-b": "1.0.0",
+  "packages/app-b": "1.0.1",
   "packages/app-b+FILLER": "0.0.0"
 }
