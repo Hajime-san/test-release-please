@@ -1,0 +1,23 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  packages/app-a:
+    dependencies:
+      lib:
+        specifier: workspace:*
+        version: link:../lib
+
+  packages/app-b:
+    dependencies:
+      lib:
+        specifier: workspace:*
+        version: link:../lib
+
+  packages/lib: {}

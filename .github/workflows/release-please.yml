@@ -1,0 +1,29 @@
+name: release-please
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/create-github-app-token@a0de6af83968303c8c955486bf9739a57d23c7f1 # v1
+        id: app-token
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4
+        with:
+          fetch-depth: 0
+          token: ${{ steps.app-token.outputs.token }}
+
+      - uses: googleapis/release-please-action@f3969c04a4ec81d7a9aa4010d84ae6a7602f86a7 # v4
+        with:
+          manifest-file: .release-please-manifest.json
+          config-file: release-please-config.json
+          token: ${{ steps.app-token.outputs.token }}
