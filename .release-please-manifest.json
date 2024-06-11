@@ -3,6 +3,6 @@
   "packages/app-a+FILLER": "0.0.0",
   "packages/app-b": "1.0.1",
   "packages/app-b+FILLER": "0.0.0",
-  "packages/lib": "1.0.0",
+  "packages/lib": "1.1.0",
   "packages/lib+FILLER": "0.0.0"
 }
